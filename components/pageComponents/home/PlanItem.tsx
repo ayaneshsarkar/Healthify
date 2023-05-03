@@ -16,7 +16,7 @@ const PlanItem: FC<PlanItemProps> = ({ name, Image }) => {
         <Checkbox color={colors.lightBlack} />
       </View>
       <View style={styles.imageContainer}>
-        <Image width={35} height={35} />
+        <Image width={40} height={40} />
       </View>
       <Text style={styles.planName}>{name}</Text>
     </View>
