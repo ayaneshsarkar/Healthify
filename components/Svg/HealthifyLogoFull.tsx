@@ -2,12 +2,12 @@ import { FC } from 'react';
 import Svg, { Path } from 'react-native-svg';
 import colors from '../../config/colors';
 
-interface Props {
+interface LogoProps {
   width: number,
   height: number
 }
 
-const HealthifyLogoFull: FC<Props> = ({ width, height }) => {
+const HealthifyLogoFull: FC<LogoProps> = ({ width, height }) => {
   return (
     <Svg
       width={width}

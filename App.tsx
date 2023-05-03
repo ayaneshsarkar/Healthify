@@ -11,6 +11,17 @@ import { StatusBar } from 'expo-status-bar'
 import Constants from 'expo-constants';
 import colors from './config/colors';
 import HealthifyLogoFull from './components/Svg/HealthifyLogoFull';
+import PlanItem from './components/pageComponents/home/PlanItem';
+
+// Plan Images
+import LifeCoach from './components/Svg/Plans/LifeCoach';
+import DietPlan from './components/Svg/Plans/DietPlan';
+import WeightLoss from './components/Svg/Plans/WeightLoss';
+import WeightGain from './components/Svg/Plans/WeightGain';
+import CountCalories from './components/Svg/Plans/CountCalories';
+import MuscleGain from './components/Svg/Plans/MuscleGain';
+import HomeWorkout from './components/Svg/Plans/HomeWorkout';
+import CGM from './components/Svg/Plans/CGM';
 
 const App: FC = () => {
   return (
@@ -30,7 +41,16 @@ const App: FC = () => {
         </Text>
       </View>
       <ScrollView>
-        <View style={styles.planView}></View>
+        <View style={styles.planView}>
+          <PlanItem name='Coach Guidance' Image={LifeCoach} />
+          <PlanItem name='Diet Plan' Image={DietPlan} />
+          <PlanItem name='Weight Loss' Image={WeightLoss} />
+          <PlanItem name='Weight Gain' Image={WeightGain} />
+          <PlanItem name='Count Calories' Image={CountCalories} />
+          <PlanItem name='Muscle Gain' Image={MuscleGain} />
+          <PlanItem name='Home Workout' Image={HomeWorkout} />
+          <PlanItem name='CGM' Image={CGM} />
+        </View>
       </ScrollView>
     </SafeAreaView>
   );
@@ -48,9 +68,15 @@ const styles = StyleSheet.create({
     backgroundColor: colors.black,
   },
   planView: {
-    width: '100%',
+    flex: 1,
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
     backgroundColor: colors.white,
-    minHeight: 500,
+    paddingLeft: 10,
+    paddingRight: 10,
+    paddingTop: 20,
+    paddingBottom: 30
   },
   promptView: {
     alignItems: 'flex-end',
